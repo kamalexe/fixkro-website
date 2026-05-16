@@ -13,34 +13,32 @@ const Locations = () => {
       <div className="absolute bottom-0 left-0 w-96 h-96 bg-cyan-500/5 rounded-full blur-3xl" />
 
       <div className="container mx-auto px-4 relative z-10">
-        <div className="text-center max-w-2xl mx-auto mb-16">
+        {/* Section Header */}
+        <div className="max-w-4xl mx-auto mb-20 text-center">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial={{ opacity: 0, y: -10 }}
+            whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
-            className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#015168]/10 text-[#015168] text-sm font-semibold mb-6"
+            transition={{ duration: 0.5 }}
+            className="flex items-center justify-center gap-3 mb-6"
           >
-            <MapPin className="w-4 h-4" />
-            Service Areas
+            <div className="h-[1px] w-8 bg-primary/20 rounded-full" />
+            <span className="text-primary font-bold text-xs md:text-sm uppercase tracking-[0.25em]">
+              Service Areas
+            </span>
+            <div className="h-[1px] w-8 bg-primary/20 rounded-full" />
           </motion.div>
+          
           <motion.h2
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            transition={{ delay: 0.1 }}
-            className="text-3xl md:text-5xl font-extrabold text-slate-900 mb-6 tracking-tight"
+            transition={{ duration: 0.6, ease: "easeOut" }}
+            style={{ fontFamily: "'Poppins', sans-serif" }}
+            className="text-4xl md:text-5xl lg:text-6xl font-bold text-[#333333] leading-[1.2] tracking-tight"
           >
-            Where We Are <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#015168] to-cyan-600">Live</span>
+            Expanding to <span className="text-primary">serve you better</span>
           </motion.h2>
-          <motion.p
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ delay: 0.2 }}
-            className="text-lg text-slate-600"
-          >
-            We are rapidly expanding our trusted appliance repair services. See if we are active in your city.
-          </motion.p>
         </div>
 
         <div className="flex flex-wrap justify-center gap-6">

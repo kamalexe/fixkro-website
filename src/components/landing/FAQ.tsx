@@ -63,39 +63,29 @@ const FAQ = () => {
 
       <div className="container mx-auto px-4 relative z-10" ref={containerRef}>
         {/* Section Header */}
-        <div className="text-center mb-20">
+        <div className="max-w-4xl mx-auto mb-20 text-center">
           <motion.div
-            initial={{ opacity: 0, scale: 0.9 }}
-            animate={isInView ? { opacity: 1, scale: 1 } : {}}
+            initial={{ opacity: 0, y: -10 }}
+            animate={isInView ? { opacity: 1, y: 0 } : {}}
             transition={{ duration: 0.5 }}
-            className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/10 text-primary border border-primary/20 mb-6 shadow-sm"
+            className="flex items-center justify-center gap-3 mb-6"
           >
-            <HelpCircle className="w-4 h-4" />
-            <span className="text-sm font-semibold uppercase tracking-wider">Common Queries</span>
+            <div className="h-[1px] w-8 bg-primary/20 rounded-full" />
+            <span className="text-primary font-bold text-xs md:text-sm uppercase tracking-[0.25em]">
+              Common Queries
+            </span>
+            <div className="h-[1px] w-8 bg-primary/20 rounded-full" />
           </motion.div>
           
           <motion.h2
             initial={{ opacity: 0, y: 20 }}
             animate={isInView ? { opacity: 1, y: 0 } : {}}
-            transition={{ delay: 0.1, duration: 0.6 }}
-            className="text-4xl md:text-5xl lg:text-6xl font-bold text-foreground mb-6 tracking-tight"
+            transition={{ duration: 0.6, ease: "easeOut" }}
+            style={{ fontFamily: "'Poppins', sans-serif" }}
+            className="text-4xl md:text-5xl lg:text-6xl font-bold text-[#333333] leading-[1.2] tracking-tight"
           >
-            Frequently Asked <span className="text-primary relative">
-              Questions
-              <svg className="absolute -bottom-2 left-0 w-full" viewBox="0 0 100 10" preserveAspectRatio="none">
-                <path d="M0 5 Q 25 0 50 5 T 100 5" fill="none" stroke="currentColor" strokeWidth="2" strokeOpacity="0.3" />
-              </svg>
-            </span>
+            Everything you need <span className="text-primary">to know</span>
           </motion.h2>
-          
-          <motion.p
-            initial={{ opacity: 0, y: 20 }}
-            animate={isInView ? { opacity: 1, y: 0 } : {}}
-            transition={{ delay: 0.2, duration: 0.6 }}
-            className="text-xl text-muted-foreground max-w-2xl mx-auto leading-relaxed"
-          >
-            Have a question? We've got you covered. If you don't find what you're looking for, feel free to reach out to our team.
-          </motion.p>
         </div>
 
         {/* FAQ Accordion Grid */}

@@ -43,7 +43,7 @@ const Hero = ({ onBookService }: HeroProps) => {
         >
           <h1 
             style={{ fontFamily: "'Poppins', sans-serif" }}
-            className="text-5xl md:text-6xl lg:text-7xl font-bold text-[#1A1F2C] leading-[1.1] mb-6 tracking-tight"
+            className="text-5xl md:text-6xl lg:text-7xl font-bold text-[#1A1F2C] leading-[1.5] mb-6 tracking-tight"
           >
             Trusted appliance repair<br />in minutes!
           </h1>

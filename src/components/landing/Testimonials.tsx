@@ -49,32 +49,32 @@ const Testimonials = () => {
 
       <div className="container mx-auto px-4 relative z-10">
         {/* Section Header */}
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, margin: "-50px" }}
-          transition={{ duration: 0.6 }}
-          className="text-center mb-16"
-        >
-          <motion.span
-            className="inline-block text-primary font-semibold text-sm uppercase tracking-wider mb-4"
+        <div className="max-w-4xl mx-auto mb-20 text-center">
+          <motion.div
+            initial={{ opacity: 0, y: -10 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.5 }}
+            className="flex items-center justify-center gap-3 mb-6"
+          >
+            <div className="h-[1px] w-8 bg-primary/20 rounded-full" />
+            <span className="text-primary font-bold text-xs md:text-sm uppercase tracking-[0.25em]">
+              Customer Love
+            </span>
+            <div className="h-[1px] w-8 bg-primary/20 rounded-full" />
+          </motion.div>
+          
+          <motion.h2
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            transition={{ delay: 0.2 }}
-          >
-            Customer Love
-          </motion.span>
-          <h2 
-            className="text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-4"
+            transition={{ duration: 0.6, ease: "easeOut" }}
             style={{ fontFamily: "'Poppins', sans-serif" }}
+            className="text-4xl md:text-5xl lg:text-6xl font-bold text-[#333333] leading-[1.2] tracking-tight"
           >
-            WHAT OUR <span className="text-primary">CUSTOMERS</span> SAY
-          </h2>
-          <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            Real stories from real Gaya families who trust FixKro for their home repairs.
-          </p>
-        </motion.div>
+            Real stories from <span className="text-primary">happy families</span>
+          </motion.h2>
+        </div>
 
         {/* Animated Marquee */}
         <div className="relative w-full overflow-hidden py-4">

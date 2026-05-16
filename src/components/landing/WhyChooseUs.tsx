@@ -40,26 +40,30 @@ const WhyChooseUs = () => {
 
       <div className="container mx-auto px-4 relative z-10" ref={containerRef}>
         {/* Section Header */}
-        <motion.div
-          initial="hidden"
-          animate={isInView ? "visible" : "hidden"}
-          variants={itemVariants}
-          transition={{ duration: 0.6 }}
-          className="text-center mb-12 md:mb-16"
-        >
-          <motion.span
-            className="inline-block text-primary font-semibold text-sm uppercase tracking-wider mb-3"
-            variants={itemVariants}
+        <div className="max-w-4xl mx-auto mb-20 text-center">
+          <motion.div
+            initial={{ opacity: 0, y: -10 }}
+            animate={isInView ? { opacity: 1, y: 0 } : {}}
+            transition={{ duration: 0.5 }}
+            className="flex items-center justify-center gap-3 mb-6"
           >
-            Why Trust Us
-          </motion.span>
-          <h2 
-            className="text-3xl md:text-4xl lg:text-5xl font-bold text-foreground"
+            <div className="h-[1px] w-8 bg-primary/20 rounded-full" />
+            <span className="text-primary font-bold text-xs md:text-sm uppercase tracking-[0.25em]">
+              The FixKro Edge
+            </span>
+            <div className="h-[1px] w-8 bg-primary/20 rounded-full" />
+          </motion.div>
+          
+          <motion.h2
+            initial={{ opacity: 0, y: 20 }}
+            animate={isInView ? { opacity: 1, y: 0 } : {}}
+            transition={{ duration: 0.6, ease: "easeOut" }}
             style={{ fontFamily: "'Poppins', sans-serif" }}
+            className="text-4xl md:text-5xl lg:text-6xl font-bold text-[#333333] leading-[1.2] tracking-tight"
           >
-            WHY CHOOSE <span className="text-primary">FIXKRO</span>
-          </h2>
-        </motion.div>
+            Why thousands <span className="text-primary">trust us</span>
+          </motion.h2>
+        </div>
 
         {/* Banners Horizontal Row */}
         <motion.div

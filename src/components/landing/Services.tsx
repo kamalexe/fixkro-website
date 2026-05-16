@@ -60,32 +60,32 @@ const Services = ({ onBookService }: ServicesProps) => {
 
       <div className="container mx-auto px-4 relative z-10">
         {/* Section Header */}
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, margin: "-50px" }}
-          transition={{ duration: 0.6 }}
-          className="text-center mb-16"
-        >
-          <motion.span
-            className="inline-block text-primary font-semibold text-sm uppercase tracking-wider mb-4"
+        <div className="max-w-4xl mx-auto mb-20 text-center">
+          <motion.div
+            initial={{ opacity: 0, y: -10 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.5 }}
+            className="flex items-center justify-center gap-3 mb-6"
+          >
+            <div className="h-[1px] w-8 bg-primary/20 rounded-full" />
+            <span className="text-primary font-bold text-xs md:text-sm uppercase tracking-[0.25em]">
+              Our Offerings
+            </span>
+            <div className="h-[1px] w-8 bg-primary/20 rounded-full" />
+          </motion.div>
+          
+          <motion.h2
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            transition={{ delay: 0.2 }}
-          >
-            Our Services
-          </motion.span>
-          <h2 
-            className="text-3xl md:text-4xl lg:text-5xl font-black text-foreground mb-4"
+            transition={{ duration: 0.6, ease: "easeOut" }}
             style={{ fontFamily: "'Poppins', sans-serif" }}
+            className="text-4xl md:text-5xl lg:text-6xl font-bold text-[#333333] leading-[1.2] tracking-tight"
           >
-            WHAT WE <span className="text-primary">FIX</span> FOR YOU
-          </h2>
-          <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            From cooling to cleaning appliances, we've got all your home repair needs covered with expert care.
-          </p>
-        </motion.div>
+            Solutions for <span className="text-primary">every appliance</span>
+          </motion.h2>
+        </div>
 
         {/* Services Grid */}
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
